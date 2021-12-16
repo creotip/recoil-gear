@@ -1,0 +1,42 @@
+{
+  "root": "libs/recoil-gear",
+  "sourceRoot": "libs/recoil-gear/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/recoil-gear",
+        "tsConfig": "libs/recoil-gear/tsconfig.lib.json",
+        "project": "libs/recoil-gear/package.json",
+        "entryFile": "libs/recoil-gear/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "assets": [
+          {
+            "glob": "libs/recoil-gear/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/recoil-gear/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/recoil-gear"],
+      "options": {
+        "jestConfig": "libs/recoil-gear/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
