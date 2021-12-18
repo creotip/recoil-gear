@@ -1,7 +1,50 @@
+<!-- markdownlint-configure-file {
+  "MD013": {
+    "code_blocks": false,
+    "tables": false
+  },
+  "MD033": false,
+  "MD041": false
+} -->
+
+<div align="center">
+
 # recoil-gear
 
-This library was generated with [Nx](https://nx.dev).
+Recoil connector to Redux DevTools
 
-## Running unit tests
+https://recoil-gear.netlify.app/
 
-Run `nx test recoil-gear` to execute the unit tests via [Jest](https://jestjs.io).
+</div>
+
+## Installation
+
+```sh 
+yarn add recoil-gear
+```
+
+or
+
+```sh 
+npm install recoil-gear
+```
+
+## Usage
+
+```jsx
+import App from './App.tsx'
+import { RecoilRoot } from 'recoil'
+import { RecoilDevTools } from 'recoil-gear'
+
+<RecoilRoot>
+    <RecoilDevTools />
+    <App />
+</RecoilRoot>
+```
+
+Open up redux devtools and observe state changes in redux devtools
+
+
+
+![Screen Shot 2021-12-17 at 23 18 52](https://user-images.githubusercontent.com/3135968/146609246-5969debb-a85e-48a6-abb9-a99eb01a66e3.png)
+
