@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  ChakraProvider,
   Code,
   FormControl,
   FormLabel,
@@ -150,7 +149,7 @@ export function App() {
 
           <Box border="1px solid #c1c1c1" borderRadius={7} p={4}>
             <form onSubmit={handleSubmitCounter}>
-              <FormLabel>First name</FormLabel>
+              <FormLabel>Counter</FormLabel>
               <NumberInput
                 defaultValue={tempCounter}
                 onChange={(valueString) => setTempCounter(valueString)}
