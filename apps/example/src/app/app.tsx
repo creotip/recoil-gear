@@ -174,7 +174,7 @@ export function App() {
       </Box>
       <Box as="footer" textAlign="center" py={10}>
         made by{' '}
-        <a href="https://github.com/creotip">
+        <a href="https://creotip.io">
           <strong>creotip</strong>
         </a>
       </Box>
